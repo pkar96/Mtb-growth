@@ -1,0 +1,16 @@
+function [bin,da, yfit, P]= binning(y,x)
+[N, edges]= histcounts(x);
+bin=zeros(1,length(edges)-1);
+da=zeros(1,length(bin));
+for i=1:length(bin)
+    da(i)=mean(y(edges(i)<=x & edges(i+1)>=x));
+    bin(i)=(edges(i)+edges(i+1))/2;
+end
+rem= find(N<5);
+if ~isempty(rem)
+    da(rem)=[];
+    bin(rem)=[];
+end
+P = polyfit(x,y,1);
+yfit = P(1)*x+P(2);
+end
