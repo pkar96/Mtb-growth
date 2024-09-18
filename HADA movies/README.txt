@@ -11,5 +11,6 @@ Additional files
 binning.m, binning_with_error.m and, binning_with_error_1.m - Used to do binning in the plots. binning_with_error.m and binning_with_error_1.m also return error estimates for the binned data.
 
 birth_to_div_gr_v_age_sims.m- Simulates linear growth and returns elongation speed, growth rate at particular ages to be plotted in call.m function.
+birth_to_div_gr_v_age_exp_sims.m- Simulates exponential growth and returns elongation speed, growth rate at particular ages to be plotted in call.m function.
 
 params.xlsx - Contains parameters which are passed to birth_to_div_gr_v_age_sims.m
